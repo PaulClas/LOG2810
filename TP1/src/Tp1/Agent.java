@@ -141,7 +141,7 @@ public class Agent {
      * @param nom2 String
      */
     public void trouverChaineContacts(String nom1, String nom2){
-
+//
     }
 
     /**
