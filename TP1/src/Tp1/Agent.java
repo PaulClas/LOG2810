@@ -62,6 +62,7 @@ public class Agent {
         for (String[] row : this.arrayListRelations_){
             int relation = Integer.parseInt(row[1]);
             matrice.add(new Matrix(row[0], row[2], relation, inf));
+            matrice.add(new Matrix(row[2], row[0], relation, inf));
         }
         // L(a) = 0
         matrice.add(new Matrix(Node1, Node1, 0, 0));
@@ -72,21 +73,25 @@ public class Agent {
 
         while (!S_examined.contains(Node2)) {
             // Trouve sommet avec dist min qui n'est pas deja dans S
-            double min_index = inf;
+            double min_weight = inf;
+            int pos_index = 0;
             for (int i = 0; i < matrice.size(); i++){
-                min_index = min_index > matrice.get(i).weight_ && !S_examined.contains(matrice.get(i).nodeAdjacent_) ? i : min_index;
+                if (min_weight > matrice.get(i).weight_)
+                    if (!S_examined.contains(matrice.get(i).nodeAdjacent_)){
+                        pos_index = i;
+                        min_weight = matrice.get(i).weight_;
+                    }
             }
-            if(min_index == inf){
+            if(min_weight == inf){
                 C_wayFinal.add("noPathFound");
-                return new F_C_arrays(C_wayFinal, F_wayFixed.get(F_wayFixed.size() - 1).weight_);
+                return new F_C_arrays(C_wayFinal, 0);
             }
 
             // Inclu le sommet u dans S
-            int min_int = (int) Math.round(min_index);
-            S_examined.add(matrice.get(min_int).nodeAdjacent_);
+            S_examined.add(matrice.get(pos_index).nodeAdjacent_);
 
-            F_wayFixed.add(new Matrix(matrice.get(min_int).nodeStart_, matrice.get(min_int).nodeAdjacent_,
-                    matrice.get(min_int).relation_, matrice.get(min_int).weight_) );
+            F_wayFixed.add(new Matrix(matrice.get(pos_index).nodeStart_, matrice.get(pos_index).nodeAdjacent_,
+                    matrice.get(pos_index).relation_, matrice.get(pos_index).weight_) );
 
             if(S_examined.contains(Node2))
                 break;
@@ -94,9 +99,13 @@ public class Agent {
             // for tous sommets voisin pas dans encore dans S
             // Trouver tous les sommets voisin.
             for (int i =0; i < matrice.size(); i++) {
-                if(S_examined.get(S_examined.size() - 1).equals(matrice.get(i).nodeStart_) && !S_examined.contains(matrice.get(i).nodeAdjacent_)){
+                if(S_examined.get(S_examined.size() - 1).equals(matrice.get(i).nodeStart_)
+                        && !S_examined.contains(matrice.get(i).nodeAdjacent_))
+                    {
                     // if L(u) + w(u,v) < L(v)
-                    if (F_wayFixed.get(F_wayFixed.size() - 1).weight_ + matrice.get(i).relation_ < matrice.get(i).weight_)
+                    double relation_temp = (double)matrice.get(i).relation_;
+                    double weight_temp = F_wayFixed.get(F_wayFixed.size() - 1).weight_ + relation_temp;
+                    if (weight_temp < matrice.get(i).weight_)
                         // L(v) = L(u) + w(u,v) TO be changed in matrice
                         matrice.get(i).weight_ = F_wayFixed.get(F_wayFixed.size() - 1).weight_ + matrice.get(i).relation_;
                 }
@@ -107,17 +116,17 @@ public class Agent {
         // On repasse pour extraire les noeuds du chemin
         C_wayFinal.add(0, Node2);
         double relation_temp = (double)F_wayFixed.get(F_wayFixed.size() - 1).relation_;
-        double weigt_temp = F_wayFixed.get(F_wayFixed.size() - 1).weight_ - relation_temp;
+        double weight_temp = F_wayFixed.get(F_wayFixed.size() - 1).weight_ - relation_temp;
         String nodeStart_temp = F_wayFixed.get(F_wayFixed.size() - 1).nodeStart_;
 
         // Boucle pour ajouter noeud intermediaire
         for(int j = F_wayFixed.size() - 1; j >= 1; --j){
             if(nodeStart_temp.equals(F_wayFixed.get(j).nodeAdjacent_)
-                    &&  weigt_temp == F_wayFixed.get(j).weight_){
+                    &&  weight_temp == F_wayFixed.get(j).weight_){
                 C_wayFinal.add(0, F_wayFixed.get(j).nodeAdjacent_);
                 nodeStart_temp = F_wayFixed.get(j).nodeStart_;
                 relation_temp = (double)F_wayFixed.get(j).relation_;
-                weigt_temp = F_wayFixed.get(j).weight_ - relation_temp;
+                weight_temp = F_wayFixed.get(j).weight_ - relation_temp;
             }
 
         }
@@ -142,6 +151,13 @@ public class Agent {
      */
     public void trouverChaineContacts(String nom1, String nom2){
 
+        //Demande 3 caractéristiques indésirables
+
+        // Élimine les relations qui partagent ces caractéristiques relation devient 0
+
+
+
+        //
     }
 
     /**

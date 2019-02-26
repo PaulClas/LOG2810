@@ -16,9 +16,15 @@ public class Main {
 
         Agent agent = new Agent(reseau.getPeople(), reseau.getRelations());
 
-//        Agent.F_C_arrays test0 = agent.shortestPath("Maximer", "France");
-//        Agent.F_C_arrays test1 = agent.shortestPath("Nathurin", "Fleurette");
+        //Lien simple  Valeur la plus petite 1
+        Agent.F_C_arrays test0 = agent.shortestPath("Maximer", "Penelope");
+        //Plusieurs liens Fonctionne n'a pas simplement pris le lien direct de 70
+        Agent.F_C_arrays test1 = agent.shortestPath("Maximer", "France");
+        // Pas de chemin
         Agent.F_C_arrays test2 = agent.shortestPath("Elorida","Alarie");
+        // Pour s'amuser
+        Agent.F_C_arrays test3 = agent.shortestPath("Adomard","Alarie");
+        Agent.F_C_arrays test4 = agent.shortestPath("Adomard","Morido");
 
         System.out.println("test");
     }
