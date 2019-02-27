@@ -133,6 +133,7 @@ public class Agent {
      */
     public void identifierIndividus(){
 
+
     }
 
     /**

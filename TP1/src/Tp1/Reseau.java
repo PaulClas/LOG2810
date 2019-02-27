@@ -10,8 +10,8 @@ import java.util.regex.Pattern;
 
 public class Reseau {
 
-    private ArrayList<String[]> people = new ArrayList<>(); // individus.txt
-    private ArrayList<String[]> relations = new ArrayList<>(); // relations.txt
+    private static ArrayList<String[]> people = new ArrayList<>(); // individus.txt
+    private static ArrayList<String[]> relations = new ArrayList<>(); // relations.txt
 
     /**
      * Read 2 texts files
@@ -19,7 +19,7 @@ public class Reseau {
      * @param a fichier de texte
      * @param b fichier de texte
      */
-    public void creerReseauSocial(String a,String b){
+    public static void creerReseauSocial(String a,String b){
         Scanner in1 = null;
         Scanner in2 = null;
 
