@@ -51,6 +51,7 @@ public class Individu {
     public void setGenie(String genie){
         this.genie =genie;
     }
+
     @Override
     public String toString() {
         return "Individu [Prenom = " + prenom + ",\t Couleur des cheveux = " + cheveux + ",\t Couleur des yeux = "
