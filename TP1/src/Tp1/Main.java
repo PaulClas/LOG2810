@@ -6,13 +6,15 @@ public class Main {
 
     public static void main(String[] args){
         Reseau reseau = new Reseau();
-
         boolean conditionA= false;
         boolean conditionC = false;
         boolean quitter = false;
         do {
             System.out.println("Menu de sélection:\n\n\t(a)\tCréer le réseau social.\n\t(b)\tAfficher le réseau social." +
                     "\n\t(c)\tJouer à Qui est-ce ?\n\t(d)\tAfficher le résultat.\n\t(e)\tQuitter.\n\n");
+            Scanner scanner = new Scanner(System.in);
+
+            char selection = scanner.next().trim().charAt(0);
 
             switch (selection){
                 case 'a':
