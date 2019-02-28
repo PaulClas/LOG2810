@@ -13,8 +13,7 @@ public class Main {
         do {
             System.out.println("Menu de sélection:\n\n\t(a)\tCréer le réseau social.\n\t(b)\tAfficher le réseau social." +
                     "\n\t(c)\tJouer à Qui est-ce ?\n\t(d)\tAfficher le résultat.\n\t(e)\tQuitter.\n\n");
-            Scanner scanner = new Scanner(System.in);
-            char selection = scanner.next().trim().charAt(0);
+
             switch (selection){
                 case 'a':
                     System.out.println("Option (a) Créer le réseau social. a été sélectionné: \n");
@@ -30,7 +29,8 @@ public class Main {
                     }
                     else{
                         System.out.println("Avertissement: Vous entrez des noms de fichiers non standard.");
-                        reseau.creerReseauSocial(nomFichier1, nomFichier2);
+                        //reseau.creerReseauSocial(nomFichier1, nomFichier2);
+                        break;
                     }
                     conditionA = true;
                     break;
