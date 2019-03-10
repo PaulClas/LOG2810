@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ee59015-aec8-4ebd-a763-0fe7c7425c4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/Individu.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/Individu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/Jeu$Caracteristic.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/Jeu$Caracteristic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/Jeu.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/Jeu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/TablePrinter$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/TablePrinter$Col.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/TablePrinter$Col.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/TablePrinter$Row.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/TablePrinter$Row.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/TablePrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/TablePrinter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../~$pport_tp1_3_mars_2019.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../~WRL3293.tmp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,38 +16,8 @@
     <SUITE FILE_PATH="coverage/GuessWho_Simon$Main.ic" NAME="Main Coverage Results" MODIFIED="1551551588116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/OneDrive/Documents/Polytechnique/LOG2810/TD/Tp1/Tp1/Agent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/OneDrive/Documents/Polytechnique/LOG2810/TD/Tp1/Tp1/Reseau.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/OneDrive/Documents/Polytechnique/LOG2810/TD/Tp1/Tp1/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/io/FileInputStream.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
@@ -66,17 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/io/FileReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
+            <state relative-caret-position="578">
               <caret line="57" selection-start-line="57" selection-end-line="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/OneDrive/Documents/Polytechnique/LOG2810/TD/Tp1/Tp1/F_C_arrays.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -106,7 +60,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -118,6 +71,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -174,19 +128,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Learn" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24036281" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2441421" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32980132" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Learn" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32980132" />
@@ -194,42 +145,31 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32955405" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32980132" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32955405" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/OneDrive/Documents/Polytechnique/LOG2810/TD/Tp1/Tp1/F_C_arrays.java">
+    <entry file="file://$PROJECT_DIR$/src/Relations.txt" />
+    <entry file="file://$PROJECT_DIR$/src/Individus.txt" />
+    <entry file="file://$USER_HOME$/OneDrive/Documents/Polytechnique/LOG2810/TD/Tp1/Tp1/Agent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Relations.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Individus.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/io/FileInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/io/FileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="408">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -242,18 +182,29 @@
     </entry>
     <entry file="file://$USER_HOME$/OneDrive/Documents/Polytechnique/LOG2810/TD/Tp1/Tp1/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="136">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/OneDrive/Documents/Polytechnique/LOG2810/TD/Tp1/Tp1/Agent.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/io/FileReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="578">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/OneDrive/Documents/Polytechnique/LOG2810/TD/Tp1/Tp1/F_C_arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/io/FileInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
         </state>
       </provider>
     </entry>

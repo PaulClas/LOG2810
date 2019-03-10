@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="041ad8b0-b740-403c-8d78-686155d73262" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/Individu.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/Individu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/Jeu$Caracteristic.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/Jeu$Caracteristic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/Jeu.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/Jeu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/TablePrinter$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/TablePrinter$Col.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/TablePrinter$Col.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/TablePrinter$Row.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/TablePrinter$Row.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/TablePrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/TablePrinter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GuessWho_modifPaul/out/production/GuessWho/Tp1/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GuessWho.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GuessWho_Simon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GuessWho_Simon/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../~$pport_tp1_3_mars_2019.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../~WRL3293.tmp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,23 +33,13 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="PackagesPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="GuessWho" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuessWho" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -85,7 +76,7 @@
   <component name="ToolWindowManager">
     <frame x="13" y="25" width="1348" height="832" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25348836" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25736433" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
