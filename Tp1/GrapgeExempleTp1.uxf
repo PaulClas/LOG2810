@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>15</zoom_level>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>990</x>
+      <y>315</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Individu
+fg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>660</x>
+      <y>540</y>
+      <w>180</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Cheveux: N
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1155</x>
+      <y>540</y>
+      <w>180</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>Cheveux: B
+
+fg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1185</x>
+      <y>870</y>
+      <w>180</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Yeux:Bleu
+
+fg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>660</x>
+      <y>1245</y>
+      <w>210</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>Adomard B B GE
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>930</x>
+      <y>870</y>
+      <w>180</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Yeux Noir
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>630</y>
+      <w>45</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>660</x>
+      <y>870</y>
+      <w>180</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Yeux Gris
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>915</x>
+      <y>540</y>
+      <w>180</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>Yeux Marons
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>735</x>
+      <y>360</y>
+      <w>360</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;
+17
+fg=red</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>975</x>
+      <y>360</y>
+      <w>120</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;
+13
+fg=red</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1050</x>
+      <y>360</y>
+      <w>210</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+11
+fg=green</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>630</y>
+      <w>270</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;
+3
+fg=red</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1230</x>
+      <y>630</y>
+      <w>60</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+2
+fg=green</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>630</y>
+      <w>315</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>190.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>630</y>
+      <w>285</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;170.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>645</y>
+      <w>75</w>
+      <h>255</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>645</y>
+      <w>285</w>
+      <h>255</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;170.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>645</y>
+      <w>525</w>
+      <h>255</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;330.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>630</y>
+      <w>540</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;&gt;
+5
+fg=red</panel_attributes>
+    <additional_attributes>340.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>660</x>
+      <y>1050</y>
+      <w>180</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Genie: GE
+
+fg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>945</y>
+      <w>570</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+2
+fg=green</panel_attributes>
+    <additional_attributes>360.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>735</x>
+      <y>1125</y>
+      <w>45</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+1
+fg=green</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>915</x>
+      <y>1245</y>
+      <w>210</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>Perrine B B GE
+
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>735</x>
+      <y>1125</y>
+      <w>300</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+1
+fg=green</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>285</x>
+      <y>825</y>
+      <w>360</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>L'invidu à les cheveux Blonds.
+Basé sur cette caractéristique,
+nous irions voir dans le graphe
+l'arc ayant le plus gros poids. 
+Dans ce cas, sur les 11 individus
+ayant les cheveuc Blonds, 5 ont 
+les cheveux gris. Malheureusement,
+notre individu mystère n'en a 
+pas alors on passe à l'arc suivant
+qui serait noir, puis bleu. etc
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>420</x>
+      <y>540</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>De Gauche à Droite :
+Les catégories ayant
+le plus de comptes
+parmis les individus
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

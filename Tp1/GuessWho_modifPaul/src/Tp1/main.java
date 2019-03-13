@@ -15,7 +15,7 @@ public class main {
 
         //
         //jeu.afficherTableau();
-        jeu.choisirJoueurMystère();
+        //jeu.choisirJoueurMystere();
         jeu.jouer();
 
 

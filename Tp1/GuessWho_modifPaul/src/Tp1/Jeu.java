@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public class Jeu {
     ArrayList<Individu> individusArray = new ArrayList<>();
-    Individu individuMystère1 = new Individu();
-    Individu individuMystère2 = new Individu();
+    Individu individuMystere1 = new Individu();
+    Individu individuMystere2 = new Individu();
     private ArrayList<Caracteristic> d_cheveu_values = new ArrayList<>();
     private ArrayList<Caracteristic> d_yeux_values = new ArrayList<>();
     private ArrayList<Caracteristic> d_departement_values = new ArrayList<>();
@@ -23,11 +23,11 @@ public class Jeu {
             case("Yeux"):
                 System.out.println("Est-ce que les individus ont les yeux " + caracteristic.keyString_+ " ?");
                 break;
-            case("Département de"):
-                System.out.println("Est-ce que les individus sont dans le Département de " + caracteristic.keyString_+ " ?");
+            case("Departement de"):
+                System.out.println("Est-ce que les individus sont dans le Departement de " + caracteristic.keyString_+ " ?");
                 break;
         }
-
+        this.afficherInterfaceReponse();
         //Est-ce que les individus
         Scanner scanner = new Scanner(System.in);
         String reponse = scanner.next().trim();
@@ -36,18 +36,54 @@ public class Jeu {
     }
 
     public void jouer(){
-        initTableauCaractéristiques();
+        initTableauCaracteristiques();
         recenssement();
+        this.choisirJoueurMystere();
         //findIndexMax(d_cheveu_values);
         //findIndexMax(d_departement_values);
         //findIndexMax(d_yeux_values);
-        System.out.println(findMaxDeToutesLesCaractéristiques().keyString_ +"  "+ findMaxDeToutesLesCaractéristiques().categorie_);
-        ;
-        System.out.println(questionAposer(findMaxDeToutesLesCaractéristiques()));
+        //this.afficherIndividusMysteresselectionner();
+        //System.out.println(findMaxDeToutesLesCaracteristiques().keyString_ +"  "+ findMaxDeToutesLesCaracteristiques().categorie_);
+        
+        this.gestionReponse(this.questionAposer(findMaxDeToutesLesCaracteristiques()));
 
 
 
 
+    }
+    
+    public void afficherInterfaceReponse() {
+    	System.out.println("\tVous pouvez choisir entre les r�ponses differentes suivantes:\n"
+    			+ "\t\to - oui\n\t\tn - non\n\t\tu - seulement l'un des deux\n\t\ta - afficher les invidus myst�res que j'ai choisi au d�but\n\t\tr - afficher les invidus myst�res qu'il reste");
+    }
+    
+    public void gestionReponse(String reponse) {
+    	switch(reponse) {
+    		case "o":
+    			
+    			break;
+    		case "n":
+    			break;
+    		case "u":
+    			break;
+    		case "a":
+    			System.out.println("Option a");
+    			this.afficherIndividusMysteresselectionner();
+    			this.questionAposer(findMaxDeToutesLesCaracteristiques());
+    			break;
+    		case "r":
+    			break;
+    		default:
+    			this.questionAposer(findMaxDeToutesLesCaracteristiques());
+    	}
+    	
+    }
+    public void removeLastIndexMax() {
+    	switch(this.findMaxDeToutesLesCaracteristiques().getCategorie()) {
+    	case "Cheveux":
+    		//this.d_cheveu_values.remove()
+    	}
+    	
     }
 
     public Integer findIndexMax(ArrayList<Caracteristic> caracteristics){
@@ -64,7 +100,7 @@ public class Jeu {
 
     }
 
-    public Caracteristic findMaxDeToutesLesCaractéristiques(){
+    public Caracteristic findMaxDeToutesLesCaracteristiques(){
         Caracteristic plus_grande_caracteristique= new Caracteristic();
 
 
@@ -160,17 +196,17 @@ public class Jeu {
         }
     }
 
-    public void choisirJoueurMystère(){
-        System.out.println("Veuillez choisir les deux individus mystères dans ce tableau" +
+    public void choisirJoueurMystere(){
+        System.out.println("Veuillez choisir les deux individus mysteres dans ce tableau" +
                 "que le programme devra trouver . \n");
         this.afficherTableau();
-        System.out.println("Entrez le prenom du premier individus mystères:\n");
+        System.out.println("Entrez le prenom du premier individus mysteres:\n");
         Scanner scanner = new Scanner(System.in);
         String prenom = scanner.next().trim();
-        trouverJoueurMystèreParPrenom(prenom, 1);
-        System.out.println("Entrez le prenom du deuxième individus mystères:\n");
+        trouverJoueurMystereParPrenom(prenom, 1);
+        System.out.println("Entrez le prenom du deuxième individus mysteres:\n");
         String prenom2 = scanner.next().trim();
-        trouverJoueurMystèreParPrenom(prenom2, 2);
+        trouverJoueurMystereParPrenom(prenom2, 2);
         afficherTableauIndividuMystere();
 
 
@@ -181,21 +217,22 @@ public class Jeu {
      * @param prenom
      * @param nb
      */
-    private void trouverJoueurMystèreParPrenom(String prenom, Integer nb){
+    private void trouverJoueurMystereParPrenom(String prenom, Integer nb){
         for(int i=0; i<individusArray.size(); i++){
             if(individusArray.get(i).getPrenom().equals(prenom)){
-               if(nb.equals(1)) individuMystère1 = individusArray.get(i);
-               if(nb.equals(2)) individuMystère2 = individusArray.get(i);
+               if(nb.equals(1)) individuMystere1 = individusArray.get(i);
+               if(nb.equals(2)) individuMystere2 = individusArray.get(i);
             }
         }
 
     }
-    private void afficherIndividusMystèressélectionner(){
-        System.out.println("Aide Mémoire: Vos individus mystères sont:\n ");
+    
+    private void afficherIndividusMysteresselectionner(){
+        System.out.println("Aide Memoire: Vos individus mysteres sont:\n ");
         this.afficherTableauIndividuMystere();
     }
 
-    public void initTableauCaractéristiques(){
+    public void initTableauCaracteristiques(){
         d_cheveu_values.add(new Caracteristic("N","noir", 0));
         d_cheveu_values.add(new Caracteristic("R","roux", 0));
         d_cheveu_values.add(new Caracteristic("B","blond", 0));
@@ -208,15 +245,15 @@ public class Jeu {
         d_yeux_values.add(new Caracteristic("G","gris", 0));
         d_yeux_values.add(new Caracteristic("M","marron", 0));
 
-        d_departement_values.add(new Caracteristic("GI","génie informatique",0));
-        d_departement_values.add(new Caracteristic("GE","génie électrique",0));
-        d_departement_values.add(new Caracteristic("GP","génie physique",0));
-        d_departement_values.add(new Caracteristic("GC","génie chimique",0));
-        d_departement_values.add(new Caracteristic("GA","génie aérospatial",0));
-        d_departement_values.add(new Caracteristic("GM","génie mécanique",0));
-        d_departement_values.add(new Caracteristic("GB","génie biomédical",0));
-        d_departement_values.add(new Caracteristic("GInd","génie industriel",0));
-        d_departement_values.add(new Caracteristic("ER","génie énergétique",0));
+        d_departement_values.add(new Caracteristic("GI","genie informatique",0));
+        d_departement_values.add(new Caracteristic("GE","genie electrique",0));
+        d_departement_values.add(new Caracteristic("GP","genie physique",0));
+        d_departement_values.add(new Caracteristic("GC","genie chimique",0));
+        d_departement_values.add(new Caracteristic("GA","genie aerospatial",0));
+        d_departement_values.add(new Caracteristic("GM","genie mecanique",0));
+        d_departement_values.add(new Caracteristic("GB","genie biomedical",0));
+        d_departement_values.add(new Caracteristic("GInd","genie industriel",0));
+        d_departement_values.add(new Caracteristic("ER","genie energetique",0));
     }
 
     public void lectureIndividu()throws IOException {
@@ -230,8 +267,8 @@ public class Jeu {
         scanner.close();
     }
 
-    private TablePrinter créerTableauIndividu(ArrayList<Individu> individusArray){
-        TablePrinter table = new TablePrinter("Prenom","Couleur Cheveux", "Couleur Yeux", "Département de Génie" );
+    private TablePrinter creerTableauIndividu(ArrayList<Individu> individusArray){
+        TablePrinter table = new TablePrinter("Prenom","Couleur Cheveux", "Couleur Yeux", "Departement de Genie" );
         for(int i=0; i<individusArray.size();i++) {
             //System.out.println(individusArray.get(i).getGenie());
             table.addRow(individusArray.get(i).getPrenom(), individusArray.get(i).getCheveux(), individusArray.get(i).getYeux(), individusArray.get(i).getGenie());
@@ -239,24 +276,25 @@ public class Jeu {
         return table;
 
     }
+    
     public void afficherTableau(){
         try {
             this.lectureIndividu();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        this.créerTableauIndividu(individusArray).print();
+        this.creerTableauIndividu(individusArray).print();
     }
 
-    private TablePrinter créerTableauMystère(Individu individuMystère1, Individu individuMystère2){
-        TablePrinter tableIMystère = new TablePrinter("Prenom","Couleur Cheveux", "Couleur Yeux", "Département de Génie");
-        tableIMystère.addRow(individuMystère1.getPrenom(), individuMystère1.getCheveux(), individuMystère1.getYeux(),individuMystère1.getGenie());
-        tableIMystère.addRow(individuMystère2.getPrenom(), individuMystère2.getCheveux(), individuMystère2.getYeux(),individuMystère2.getGenie());
-        return tableIMystère;
+    private TablePrinter creerTableauMystere(Individu individuMystere1, Individu individuMystere2){
+        TablePrinter tableIMystere = new TablePrinter("Prenom","Couleur Cheveux", "Couleur Yeux", "Departement de Genie");
+        tableIMystere.addRow(individuMystere1.getPrenom(), individuMystere1.getCheveux(), individuMystere1.getYeux(),individuMystere1.getGenie());
+        tableIMystere.addRow(individuMystere2.getPrenom(), individuMystere2.getCheveux(), individuMystere2.getYeux(),individuMystere2.getGenie());
+        return tableIMystere;
     }
 
     private void afficherTableauIndividuMystere(){
-        this.créerTableauMystère(individuMystère1,individuMystère2).print();
+        this.creerTableauMystere(individuMystere1,individuMystere2).print();
     }
 
 
@@ -280,6 +318,19 @@ public class Jeu {
             this.keyString_ = keyString;
             this.count_ = count;
 
+        }
+        
+        public String getKey(){
+        	return key_;
+        }
+        public String getKeyString() {
+        	return keyString_;
+        }
+        public int getCount() {
+        	return count_;
+        }
+        public String getCategorie() {
+        	return categorie_;
         }
 
     }

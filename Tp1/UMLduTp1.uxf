@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>15</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>75</x>
+      <y>60</y>
+      <w>1005</w>
+      <h>1275</h>
+    </coordinates>
+    <panel_attributes>Agent
+-
+-static int compteur_ 
+-String[] nompastrouve_
+-String[] nompastrouve_
+-ArrayList&lt;String[]&gt; arrayListPeople_
+-ArrayList&lt;String[]&gt; arrayListRelations_
+-ArrayList&lt;String[]&gt; arrayListPeopleSafeCopy_
+-ArrayList&lt;String&gt; nomreponse_
+-ArrayList&lt;F_C_arrays&gt; nomChemin_
+-ArrayList&lt;Caracteristic&gt; d_cheveu_values
+-ArrayList&lt;Caracteristic&gt; d_yeux_values
+-ArrayList&lt;Caracteristic&gt; d_departement_values
+-
++Agent()
+	+Agent(ArrayList&lt;String[]&gt; Individus, ArrayList&lt;String[]&gt; Relations)
+	+ArrayList&lt;String[]&gt; getArrayListPeople_()
+	+ArrayList&lt;String[]&gt; getArrayListRelations_()
+
++void init_tableau_car()
+	+void finalAnswer(String response)
+	+void identifierIndividus()
+	+void findSingleIndividuals(ArrayList&lt;int[]&gt; maybeInSolution)
+	+void removePeople(int typeCaracteristic, int car, boolean inSolution)
+	+void updateQuestionStatus(int typeCaracteristic, int car)
++void recensement()
+	+void enleverArcsIndesirables(String car1, String car2, String car3)
+	+void afficherResultat()
+
++F_C_arrays trouverChaineContacts(String Node1, String Node2)
++String captureUserInput()
++int[] findQuestion(int countCheveuTrouve, int countyeuxTrouve, int countdepTrouve)
++String poseQuestion(int typeCaracteristic, int car)
++String toString()
+-
+Responsabilitiés:
+*Permet de jouer au jeu Guess Who
+*Contient l'ensemble des fonctions qui permettent d'identifier les individus mystères.
+-
+Contient:
++void identifierIndividus() C3
++void enleverArcsIndesirables(String car1, String car2, String car3) C4
+*F_C_arrays trouverChaineContacts(String Node1, String Node2) C5
+*+void afficherResultat() C6
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1320</x>
+      <y>255</y>
+      <w>705</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>Matrix
+-
+-Matrix()
+-Matrix(String NodeStart, String nodeAdjacent, int relation, double weight)
+-
+Responsabilité:
+Pour gérer l'information du graphe, soit les noeuds et les arcs.
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1320</x>
+      <y>465</y>
+      <w>705</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Caracteristic
+-
+-Caracteristic()
+		-Caracteristic(String key, String keyString, int count, boolean qPose)
+-
+Responsabilité:
+Pour identifier les caractéristique de chaque individu
+	</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1320</x>
+      <y>60</y>
+      <w>540</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>F_C_arrays
+-
+F_C_arrays()
+	F_C_arrays(ArrayList&lt;String&gt; nodes, double weight)
+-
+Responsabilité:
+Créer le Graphe grâce auxquelles nous allons générer la chaine de contact la plus courte</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1320</x>
+      <y>690</y>
+      <w>705</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>Reseau
+-
+-void creerReseauSocial(String a,String b)
+	-ArrayList&lt;String[]&gt; getPeople()
+	-ArrayList&lt;String[]&gt; getRelations()
+	-void afficherReseauSocial()
+	-String toString()
+-
+Responsabilité:
+*Fait la gestion du réseau social importé par un fichier .txt
+-
+Contient:
+*-void creerReseauSocial(String a,String b) C1
+*-void creerReseauSocial(String a,String b) C2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1320</x>
+      <y>1095</y>
+      <w>705</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Main
+-
+char selection
+boolean conditionA
+boolean conditionC
+boolean quitter
+-
+public static void main(String[] args)
+-
+Responsabilités:
+Gère l'interface sur la console </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1065</x>
+      <y>1170</y>
+      <w>285</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1680</x>
+      <y>990</y>
+      <w>45</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1065</x>
+      <y>120</y>
+      <w>285</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1065</x>
+      <y>315</y>
+      <w>285</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1065</x>
+      <y>510</y>
+      <w>285</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+</diagram>
