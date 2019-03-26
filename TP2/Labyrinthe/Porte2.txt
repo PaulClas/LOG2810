@@ -1,0 +1,7 @@
+{
+S->, S->aB, S->cB, S->bA, A->fS, A->dB, S->eS
+}
+e Porte7
+ea Porte10
+ebf Porte20
+bd Porte12

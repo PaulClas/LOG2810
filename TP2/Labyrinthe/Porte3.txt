@@ -1,0 +1,8 @@
+{
+S->a, S->fA, C->eA, A->fA, A->bB, B->cS
+}
+aefff Porte1
+fffbc Porte8
+a Porte11
+aebc Porte14
+aebcaefff Porte20

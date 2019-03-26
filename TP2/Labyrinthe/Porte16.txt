@@ -1,0 +1,10 @@
+{
+S->aA, S->bC, A->cC, A->eB, B->a, C->f, C->dD, D->cS
+}
+acdc Porte3
+acdcbd Porte13
+aea Porte19
+acf Porte10
+ac Porte20
+acdcbf Porte14
+bf Porte18

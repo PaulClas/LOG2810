@@ -15,13 +15,11 @@ public class Main {
 
         Agent agent = new Agent(reseau.getPeople(), reseau.getRelations());
 
-
         System.out.println(reseau);
 
         agent.identifierIndividus();
 
         System.out.println("test");
-
 
         do {
             System.out.println("Menu de sélection:\n\n\t(a)\tCréer le réseau social.\n\t(b)\tAfficher le réseau social." +

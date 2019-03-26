@@ -1,0 +1,10 @@
+{
+S->f, S->e, S->dA, A->aS, S->cS
+}
+dada Porte11
+dadac Porte7
+e Porte3
+ccccccc Porte12
+dadaf Porte8
+ccccf Porte20
+dadac Porte17

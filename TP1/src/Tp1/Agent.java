@@ -64,8 +64,10 @@ public class Agent {
         ArrayList<Matrix> matrice = new ArrayList<>();
         for (String[] row : this.arrayListRelations_){
             int relation = Integer.parseInt(row[1]);
-            matrice.add(new Matrix(row[0], row[2], relation, inf));
-            matrice.add(new Matrix(row[2], row[0], relation, inf));
+            if(relation != 0){
+                matrice.add(new Matrix(row[0], row[2], relation, inf));
+                matrice.add(new Matrix(row[2], row[0], relation, inf));
+            }
         }
         // L(a) = 0
         matrice.add(new Matrix(Node1, Node1, 0, 0));
@@ -139,64 +141,167 @@ public class Agent {
     }
 
 
+    public void init_tableau_car(){
+        //Dresser le portrait des caracteristique
+        d_cheveu_values.add(new Caracteristic("N","noir", 0, false));
+        d_cheveu_values.add(new Caracteristic("R","roux", 0, false));
+        d_cheveu_values.add(new Caracteristic("B","blond", 0, false));
+        d_cheveu_values.add(new Caracteristic("M","marron", 0, false));
+
+        d_yeux_values.add(new Caracteristic("B","bleu", 0, false));
+        d_yeux_values.add(new Caracteristic("V","Vert", 0, false));
+        d_yeux_values.add(new Caracteristic("N","noir", 0, false));
+        d_yeux_values.add(new Caracteristic("G","gris", 0, false));
+        d_yeux_values.add(new Caracteristic("M","marron", 0, false));
+
+        d_departement_values.add(new Caracteristic("GI","génie informatique",0, false));
+        d_departement_values.add(new Caracteristic("GE","génie électrique",0, false));
+        d_departement_values.add(new Caracteristic("GP","génie physique",0, false));
+        d_departement_values.add(new Caracteristic("GC","génie chimique",0, false));
+        d_departement_values.add(new Caracteristic("GA","génie aérospatial",0, false));
+        d_departement_values.add(new Caracteristic("GM","génie mécanique",0, false));
+        d_departement_values.add(new Caracteristic("GB","génie biomédical",0, false));
+        d_departement_values.add(new Caracteristic("GInd","génie industriel",0, false));
+        d_departement_values.add(new Caracteristic("ER","génie énergétique",0, false));
+    }
 
     /**
      * Finds the 2 mystery persons
      */
     public void identifierIndividus(){
+        // count caracteristique trouve pour chaque categorie de caracteristique {cheveux , yeux , departement}
+        int[] count_caracteristique = new int[3];
+
+        init_tableau_car();
+
         do {
             // Avoir le portrait
             this.recensement();
 
+            //Trouve maximum
+            int[] temp_max; // format [array index, index in array, value]
+            temp_max = findNextQuestion(count_caracteristique[0], count_caracteristique[1], count_caracteristique[2]);
+
             // Prend la réponse
-            this.poseQuestion(car);
+            String reponse = this.poseQuestion(temp_max[0], temp_max[1]);
 
-            // Selon répond
-            //if(){
+            // Selon réponse
+            if(reponse == "o" || reponse == "oui pour les 2 individus"){
+                count_caracteristique[temp_max[0]] += 2;
+            } else if (reponse == "u" || reponse == "oui pour un seul individu"){
+                count_caracteristique[temp_max[0]] += 1;
+            }
+            else if (reponse == "n" || reponse == "non pour les 2 individus"){
+                for (int i = 0; i < this.arrayListPeople_.size(); i++) {
+                    // Need to add plus 1 to shift to caracteristics first index his name
+                    switch (temp_max[1]) {
+                        case 0:
+                            if(this.arrayListPeople_.get(i)[temp_max[0]+1] == this.d_cheveu_values.get(temp_max[0]).key_)
+                                this.arrayListPeople_.remove(i);
+                            break;
+                        case 1:
+                            if(this.arrayListPeople_.get(i)[temp_max[0]+1] == this.d_yeux_values.get(temp_max[0]).key_)
+                                this.arrayListPeople_.remove(i);
+                            break;
+                        case 2:
+                            if(this.arrayListPeople_.get(i)[temp_max[0]+1] == this.d_departement_values.get(temp_max[0]).key_)
+                                this.arrayListPeople_.remove(i);
+                            break;
+                        default:
+                    }
+                }
+            }
 
-            //}
-
-        } while(this.arrayListPeople_.size() > 2);// Recensement
+        } while(this.arrayListPeople_.size() > 2
+                || (count_caracteristique[0] + count_caracteristique[1] + count_caracteristique[2]) < 6);// Recensement
 
         System.out.println("test");
+    }
+
+    public int[] findNextQuestion(int countCheveuTrouvé, int countyeuxTrouvé, int countdepTrouvé){
+        // format [array index, index in array, value]
+        int[] max_car1 = new int[3], max_car2 = new int[3], max_car3 = new int[3];
+        max_car1[0] = 0;
+        max_car2[0] = 1;
+        max_car3[0] = 2;
+
+        // Condition if pour ne pas bouclé les caractéristiques deja parcouru
+        if (countCheveuTrouvé < 2){
+            for (int i = 0; i < this.d_cheveu_values.size(); i++) {
+                if (this.d_cheveu_values.get(i).qPose_ == false)
+                    if (max_car1[2] < this.d_cheveu_values.get(i).count_) {
+                        max_car1[1] = i;
+                        max_car1[2] = this.d_cheveu_values.get(i).count_;
+                    }
+            }
+        }
+        if (countyeuxTrouvé < 2){
+            for (int i = 0; i < this.d_yeux_values.size(); i++) {
+                if (this.d_yeux_values.get(i).qPose_ == false)
+                    if (max_car2[2] < this.d_yeux_values.get(i).count_) {
+                        max_car2[1] = i;
+                        max_car2[2] = this.d_yeux_values.get(i).count_;
+                    }
+            }
+        }
+        if (countdepTrouvé < 2){
+            for (int i = 0; i < this.d_departement_values.size(); i++) {
+                if (this.d_departement_values.get(i).qPose_ == false) {
+                    if (max_car3[2] < this.d_departement_values.get(i).count_) {
+                        max_car3[1] = i;
+                        max_car3[2] = this.d_departement_values.get(i).count_;
+                    }
+                }
+            }
+        }
+
+        //Compare les 3 resultats
+        max_car1 = max_car2[2] > max_car1[2] ? max_car2 : max_car1;
+        max_car1 = max_car3[2] > max_car1[2] ? max_car3 : max_car1;
+        return max_car1;
     }
 
     /**
      *
      * @param car
+     * @param typeCaracteristic
      * @return
      */
-    public String poseQuestion(String car, String typeCaracteristic){
-        System.out.println("Les individus ont-ils " + car + "?");
+    public String poseQuestion(int car, int typeCaracteristic){
+        switch (typeCaracteristic) {
+            case 0:
+                System.out.println("Les individus ont-ils les cheveux " + this.d_cheveu_values.get(car).keyString_ + "?");
+                break;
+            case 1:
+                System.out.println("Les individus ont-ils les yeux " + this.d_yeux_values.get(car).keyString_ + "?");
+                break;
+            case 2:
+                System.out.println("Les individus sont-ils du département de " + this.d_departement_values.get(car).keyString_ + "?");
+                break;
+            default:
+        }
 
-        Scanner scanner = new Scanner(System.in);
-
-        return scanner.next();
+        // To get and return response
+        Scanner scan = new Scanner(System.in);
+        String result = "";
+        result+=scan.nextLine();
+        scan.close();
+        return result;
     }
 
     public void recensement() {
-        //Dresser le portrait des caracteristique
-        d_cheveu_values.add(new Caracteristic("N","noir", 0));
-        d_cheveu_values.add(new Caracteristic("R","roux", 0));
-        d_cheveu_values.add(new Caracteristic("B","blond", 0));
-        d_cheveu_values.add(new Caracteristic("M","marron", 0));
+        // Put count back to 0
+        for (Caracteristic row: this.d_cheveu_values) {
+            row.count_ = 0;
+        }
+        for (Caracteristic row: this.d_cheveu_values) {
+            row.count_ = 0;
+        }
+        for (Caracteristic row: this.d_cheveu_values) {
+            row.count_ = 0;
+        }
 
-
-        d_yeux_values.add(new Caracteristic("B","bleu", 0));
-        d_yeux_values.add(new Caracteristic("V","Vert", 0));
-        d_yeux_values.add(new Caracteristic("N","noir", 0));
-        d_yeux_values.add(new Caracteristic("G","gris", 0));
-        d_yeux_values.add(new Caracteristic("M","marron", 0));
-
-        d_departement_values.add(new Caracteristic("GI","génie informatique",0));
-        d_departement_values.add(new Caracteristic("GE","génie électrique",0));
-        d_departement_values.add(new Caracteristic("GP","génie physique",0));
-        d_departement_values.add(new Caracteristic("GC","génie chimique",0));
-        d_departement_values.add(new Caracteristic("GA","génie aérospatial",0));
-        d_departement_values.add(new Caracteristic("GM","génie mécanique",0));
-        d_departement_values.add(new Caracteristic("GB","génie biomédical",0));
-        d_departement_values.add(new Caracteristic("GInd","génie industriel",0));
-        d_departement_values.add(new Caracteristic("ER","génie énergétique",0));
+        // Count the attributs
         for (int i = 0; i < this.arrayListPeople_.size(); i++){
             String car1 = this.arrayListPeople_.get(i)[1];
             String car2 = this.arrayListPeople_.get(i)[2];
@@ -235,7 +340,6 @@ public class Agent {
                     d_yeux_values.get(4).count_ += 1;
                     break;
                 default:
-
             }
 
             switch (car3) {
@@ -274,15 +378,17 @@ public class Agent {
     private class Caracteristic{
         String key_, keyString_;
         int count_;
+        boolean qPose_;
 
         Caracteristic(){
-            this(null, null, 0);
+            this(null, null, 0, false);
         }
 
-        Caracteristic(String key, String keyString, int count){
+        Caracteristic(String key, String keyString, int count, boolean qPose){
             this.key_ = key;
             this.keyString_ = keyString;
             this.count_ = count;
+            this.qPose_ = false;
         }
     }
 
