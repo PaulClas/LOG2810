@@ -1,0 +1,10 @@
+{
+S->fA, S->eB, A->a, B->bC, C->dC
+}
+f Porte2
+e Porte20
+fa Porte4
+fa Porte3
+ebddd Porte11
+fa Porte10
+eb Porte7

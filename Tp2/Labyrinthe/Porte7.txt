@@ -1,0 +1,5 @@
+{
+S->, S->aA, A->b, S->d, s->F
+}
+ Porte17
+a Porte2
