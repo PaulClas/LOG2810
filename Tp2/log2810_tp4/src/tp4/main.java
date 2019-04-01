@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class main {
 	public static void main(String[] args) {
+		String nomPorte= null;
+		boolean conditionA=false;
 		Labyrinth labyrinth = new Labyrinth();
 		boolean quitter = false;
 		do {
@@ -13,9 +15,13 @@ public class main {
             char selection = scanner.next().trim().charAt(0);
             switch(selection) {
             	case'a':
-            		labyrinth.entrerDansLeLabyrinth();
+            		conditionA= true;
+            		labyrinth.ouvrirPorte("Porte1.txt");
             		break;
             	case'b':
+            		if(conditionA ==true) {
+            			labyrinth.ouvrirPorte(nomPorte);
+            		}
             		break;
             	case'c':
             		break;
