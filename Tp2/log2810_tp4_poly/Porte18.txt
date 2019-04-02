@@ -1,0 +1,7 @@
+{
+S->, S->aS, S->bS, S->cA, A->dB, B->f
+}
+ab Porte12
+cdf Porte16
+abc Porte9
+cd Porte15

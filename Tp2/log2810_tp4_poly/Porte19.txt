@@ -1,0 +1,5 @@
+{
+S->aA, A->f, A->bS, B->aA, B->eA, B->dS, B->
+}
+afefefefaf Porte9
+afdaf Porte8
