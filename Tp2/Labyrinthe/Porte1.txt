@@ -1,5 +1,5 @@
 {
-S->aA, S->bA, S->c, A->aS, A->bS, S->d,S->e 
+S->aA, S->bA, S->c, A->aS, A->bS, S->d, S->e, 
 }
 aaab Porte8
 abab Porte10

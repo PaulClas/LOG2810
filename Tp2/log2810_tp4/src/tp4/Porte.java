@@ -17,15 +17,10 @@ public class Porte {
 	public Porte() {}
 	
 	public Instruction getinstructionArray(int index) { return instructionArray.get(index); }
+	public Password getpasswordArray(int index) { return passwordArray.get(index);}
+	public int getNombreInstructions(){ return nombreInstructions;}
+	public int getNombrePassWord() {return nombrePassWord;}
 	
-	/*
-	public void setEtatInitial(char etatInitial) { this.etatInitial = etatInitial; }
-	public char getlettreDuMdp() { return lettreDuMdp; }
-	public void setlettreDuMdp(char lettreDuMdp) { this.lettreDuMdp = lettreDuMdp; }
-	public char getEtatFinal() { return etatFinal; }
-	public void setEtatFinal(char etatFinal) { this.etatFinal = etatFinal; }
-	public void afficher() {System.out.println("Etat Initial: "+ getEtatInitial() + " lettreDuMdp: "+getlettreDuMdp()+ " Etat Final: "+ getEtatFinal());}
-	*/
 	
 	
 }

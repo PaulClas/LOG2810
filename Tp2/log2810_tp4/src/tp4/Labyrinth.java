@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-
+import tp4.Automate;
 public class Labyrinth {
 	ArrayList<Password> passwordArray = new ArrayList<>();
 	ArrayList<Instruction> instructionArray = new ArrayList<>();
@@ -65,8 +65,10 @@ public class Labyrinth {
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
-		Porte porte = new Porte(instructionArray,passwordArray);
-		porte.getinstructionArray(0).afficher();
+		Porte porte1 = new Porte(instructionArray,passwordArray);
+		
+		Automate automate = new Automate();
+		automate.creerAutomate(porte1);
 		//TEST///////////////////////////////////////////////////////////////////
 		/*for(int i=0; i<instructionArray.size();i++) {
 			instructionArray.get(i).afficher();

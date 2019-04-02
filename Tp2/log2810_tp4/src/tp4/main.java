@@ -2,7 +2,11 @@ package tp4;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
+
 public class main {
+	public char GLOBAL = 'S';
+
 	public static void main(String[] args) {
 		String nomPorte= null;
 		boolean conditionA=false;
@@ -17,7 +21,7 @@ public class main {
             switch(selection) {
             	case'a':
             		conditionA= true;
-            		labyrinth.ouvrirPorte("Porte1.txt");
+            		labyrinth.ouvrirPorte("Porte6.txt");
             		break;
             	case'b':
             		if(conditionA ==true) {
