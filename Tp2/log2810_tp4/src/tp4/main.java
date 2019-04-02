@@ -1,4 +1,5 @@
 package tp4;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class main {
@@ -8,7 +9,7 @@ public class main {
 		Labyrinth labyrinth = new Labyrinth();
 		boolean quitter = false;
 		do {
-			System.out.println("Menu de selection:\n\n\t(a)\tEntrer dans le labyrinthe\n\t(b)\tOuvrir une porte" +
+			System.out.println("\nMenu de selection:\n\n\t(a)\tEntrer dans le labyrinthe\n\t(b)\tOuvrir une porte" +
                     "\n\t(c)\tAfficher le chemin parcouru\n\t(d)\tQuitter\n\n");
             Scanner scanner = new Scanner(System.in);
             

@@ -11,39 +11,53 @@ import java.util.regex.Pattern;
 
 
 public class Labyrinth {
-	 public void ouvrirPorte(String nomPorte) {
+	ArrayList<Password> passwordArray = new ArrayList<>();
+	ArrayList<Instruction> instructionArray = new ArrayList<>();
+	
+	public void ouvrirPorte(String nomPorte) {
+		boolean mdpString= false;
+		Scanner input = null;
+		int counterMdp=0, counterInstructions =0;
+		String temp_mdp, temp_porte;
 		try {
-		FileReader fichier = new FileReader(nomPorte);
-		BufferedReader br = new BufferedReader(fichier);
-		String ligneLive = br.readLine();
-		Scanner input = new Scanner(br);
+		input = new Scanner( new BufferedReader(new FileReader(nomPorte)));
 		int numbLigne = 0;
 		while(input.hasNextLine()) {
-			if(numbLigne ==0 || numbLigne ==2) {
-				String inutile = ligneLive;
-				System.out.println(inutile);
-				numbLigne++;
-			}
-			if(numbLigne ==1) {
-				//System.out.println(input.nextLine());
-				
-					// lit chaque instruction d'une ligne et l'ajoute
-					//System.out.println(str);
+			String temp_str = input.nextLine();
+			Scanner lineScanner = new Scanner(temp_str);
+			//lineScanner.useDelimiter(" ");
+			String str = new String();
+			//str=lineScanner.next();
+			while(lineScanner.hasNext()) {
+				str=lineScanner.next();
+				// lit chaque instruction d'une ligne et l'ajoute
+				if(str.contentEquals("{") || str.contentEquals("}")) {
+					//System.out.println("Inutile");
+					numbLigne++;
+					//str=lineScanner.next();
 				}
-				
-				numbLigne++;
+				else if(numbLigne==1 && str != "{") {
+					//System.out.println(str);
+					//System.out.println(str.length());
+					//System.out.println(str.charAt(0));
+					//System.out.println(str.charAt(3));
+					if(str.length()<=4 || str.charAt(4)==','){
+						instructionArray.add(new Instruction(str.charAt(0),str.charAt(3),str.charAt(0)));
+					}else {
+						instructionArray.add(new Instruction(str.charAt(0),str.charAt(3),str.charAt(4)));
+					}
+					//counterInstructions++;
+				}
+				else if(numbLigne >1) {
+					passwordArray.add(new Password(str,lineScanner.next()));
+					//System.out.println(str);
+					
+				}
+				//str=lineScanner.nextLine();
+				//System.out.println(str);
 			}
-			if(numbLigne >2) {
-				//System.out.println(input.nextLine());
-				numbLigne++;
-			}
-			numbLigne++;
-		
-			
-			
-			
-			
-			
+			//System.out.println("Sortie");
+		}	
 	/*
 	 * 
 	 * 
@@ -51,7 +65,20 @@ public class Labyrinth {
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
+		Porte porte = new Porte(instructionArray,passwordArray);
+		porte.getinstructionArray(0).afficher();
+		//TEST///////////////////////////////////////////////////////////////////
+		/*for(int i=0; i<instructionArray.size();i++) {
+			instructionArray.get(i).afficher();
+		}*/
 		
+		//System.out.println(counterInstructions);
+		
+		/*for(int i =0; i<passwordArray.size(); i++) {
+			//System.out.print(passwordArray.get(i).getMotDePasse());
+			passwordArray.get(i).afficher();
+		}*/
+		///////////////////////////////////////////////////////////////////////////
 	 }
 
 }
