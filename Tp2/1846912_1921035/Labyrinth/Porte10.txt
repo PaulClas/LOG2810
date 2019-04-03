@@ -1,0 +1,6 @@
+{
+S->d, S->c, A->, A->b, A->eS
+}
+c Porte4
+dede Porte12
+db Porte5
