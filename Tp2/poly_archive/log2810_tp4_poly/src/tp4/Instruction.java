@@ -19,6 +19,5 @@ public class Instruction {
 	public char getEtatFinal() { return etatFinal; }
 	public void setEtatFinal(char etatFinal) { this.etatFinal = etatFinal; }
 	public void afficher() {System.out.println("Etat Initial: "+ getEtatInitial() + " lettreDuMdp: "+getlettreDuMdp()+ " Etat Final: "+ getEtatFinal());}
-	public void afficherProf() {System.out.print("{ "+ getEtatInitial()+ "->"+getlettreDuMdp()+getEtatFinal()+"}");}
 
 }

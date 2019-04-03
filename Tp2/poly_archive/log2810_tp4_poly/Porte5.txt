@@ -1,0 +1,6 @@
+{
+S->dA, A->bS, S->e
+}
+bdbd Porte20
+d Porte15
+e Porte10

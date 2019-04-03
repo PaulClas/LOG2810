@@ -1,0 +1,6 @@
+{
+S->fA, A->eB, B->c
+}
+fe Porte2
+f Porte9
+fec Porte13

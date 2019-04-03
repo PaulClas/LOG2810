@@ -11,7 +11,6 @@ public class main {
 		String nomPorte= null;
 		Porte porte = new Porte();
 		boolean conditionA=false;
-		boolean isBoss = false;
 		Labyrinth labyrinth = new Labyrinth();
 		boolean quitter = false;
 		do {
@@ -33,13 +32,7 @@ public class main {
             		if(conditionA ==true) {
             			System.out.println("Entrez le numero de la porte que vous desirez ouvrir:\n");
             			String choixPorte= scanner.next();
-            			//System.out.println(choixPorte);
-            			//System.out.println(choixPorte);
-            			isBoss = false;
-            			if('B' == choixPorte.charAt(0)) {
-            				isBoss= true;
-            			}
-            			if(isBoss ==false) {
+            			if(nomPorte!="Boss") {
             				nomPorte= "Porte"+choixPorte+".txt";
             				porte =labyrinth.ouvrirPorte(nomPorte);
             				labyrinth.afficherOuvrirPorte(porte);
@@ -50,22 +43,13 @@ public class main {
             					labyrinth.afficherOuvrirPorte(labyrinth.ouvrirPorte("Porte1.txt"));
             					//labyrinth.ajoutCheminParcourue(labyrinth.ouvrirPorte(nomPorte));
             				}
-            			}if(isBoss== true){
-            				labyrinth.affronterBoss();
-            				labyrinth.afficherLeCheminParcourue(isBoss);
-            				System.out.println("\n\n Vous êtes revenu au départ");
-            				labyrinth.afficherOuvrirPorte(labyrinth.ouvrirPorte("Porte1.txt"));
-            				isBoss= false;
-            			
+            			}else{
+            				
             			}
             		}
             		break;
             	case'c':
-            		if(isBoss==false) {
-            			labyrinth.afficherLeCheminParcourue(isBoss);
-            		}else if(isBoss ==true) {
-            			labyrinth.afficherLeCheminParcourue(isBoss);
-            		}
+            		labyrinth.afficherLeCheminParcourue();
             		break;
             	case'd':
             		quitter = true;
