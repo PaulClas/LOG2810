@@ -41,15 +41,18 @@ public class main {
             			}
             			if(isBoss ==false) {
             				nomPorte= "Porte"+choixPorte+".txt";
-            				porte =labyrinth.ouvrirPorte(nomPorte);
-            				labyrinth.afficherOuvrirPorte(porte);
-            				//labyrinth.ajoutCheminParcourue(labyrinth.ouvrirPorte(nomPorte));
-            				if(!porte.estGouffre()) {
-            					System.out.println("Cette porte est un gouffre\nRetour au debut du labyrinthe");
-            					//labyrinth.ajoutCheminParcourue(labyrinth.ouvrirPorte(nomPorte));
-            					labyrinth.afficherOuvrirPorte(labyrinth.ouvrirPorte("Porte1.txt"));
-            					//labyrinth.ajoutCheminParcourue(labyrinth.ouvrirPorte(nomPorte));
-            				}
+            				//if(labyrinth.verifierSiPorteSelectionnerEstValide(nomPorte)) {
+            					porte =labyrinth.ouvrirPorte(nomPorte);
+                				labyrinth.afficherOuvrirPorte(porte);
+                				if(!porte.estGouffre()) {
+                					System.out.println("Cette porte est un gouffre\nRetour au debut du labyrinthe");
+                					//labyrinth.ajoutCheminParcourue(labyrinth.ouvrirPorte(nomPorte));
+                					labyrinth.afficherOuvrirPorte(labyrinth.ouvrirPorte("Porte1.txt"));
+                					//labyrinth.ajoutCheminParcourue(labyrinth.ouvrirPorte(nomPorte));
+                				}
+            				/*}else {
+            					System.out.println("\nCettre porte n'est pas acessible, Veuillez choisir une porte valide");
+            				}*/
             			}if(isBoss== true){
             				labyrinth.affronterBoss();
             				labyrinth.afficherLeCheminParcourue(isBoss);
@@ -70,6 +73,8 @@ public class main {
             	case'd':
             		quitter = true;
             		System.out.println("Option (d) Quitter a ete selectionner");
+            		labyrinth.afficherLeCheminParcourue(false);
+            		labyrinth.afficherLeCheminParcourue(true);
             		break;
             	default:
             		System.out.println("Erreur. Veuillez choisir une option valide");

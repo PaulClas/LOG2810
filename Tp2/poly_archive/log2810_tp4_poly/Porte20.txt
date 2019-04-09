@@ -1,5 +1,0 @@
-{
-S->b, S->c, S->d
-}
-b Porte3
-d Porte12

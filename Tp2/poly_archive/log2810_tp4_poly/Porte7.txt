@@ -1,5 +1,0 @@
-{
-S->0, S->aA, A->b, S->d, S->f
-}
-0 Porte17
-a Porte2

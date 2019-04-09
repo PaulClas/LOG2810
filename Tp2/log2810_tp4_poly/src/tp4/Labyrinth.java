@@ -45,7 +45,7 @@ public class Labyrinth {
 		
 	}
 	public boolean it() {
-		if(motDePasseConcatener().equals("ce00e")) {
+		if(motDePasseConcatener()=="ce00e") {
 			return true;}
 		else return false;
 	}
@@ -109,7 +109,7 @@ public class Labyrinth {
 			motDePasseATesterBoss.add(new Password(motDePasseConcatener(), "Boss"));
 			porteBoss= new Porte("Boss",automateBoss,motDePasseATesterBoss);
 			Automate automate = new Automate();
-			if(automate.genererAutomate(porteBoss).size()>0 || it()) {
+			if(automate.genererAutomate(porteBoss).size()==1 || it()) {
 				System.out.println("\nc. Le Boss vainc l 'agent. Retour à la Porte1");
 				aVaincuBoss = true;
 			}else {
@@ -175,6 +175,22 @@ public class Labyrinth {
 		//System.out.println(str);
 		return str;
 	}
+	/*
+	public boolean verifierSiPorteSelectionnerEstValide(String nomPorte) {
+		boolean isEntreeValide= true;
+		for(int i=0; i<historique.size();i++) {
+			for(int j=0; j<historique.get(i).getNombreInstructions();j++) {
+				String str = historique.get(i).getpasswordArray(j).getNomPorte()+".txt";
+				System.out.println(str);
+				System.out.println(nomPorte);
+				if(nomPorte!= str) {
+					isEntreeValide = true;
+					j=historique.get(i).getNombreInstructions();
+				}else return false;
+			}
+		}
+		return isEntreeValide;
+	}*/
 	/**
 	 * 
 	 * @param nomPorte
