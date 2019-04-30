@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import tp5.TablePrinter;
+
 public class Jeu {
     ArrayList<Individu> individusArray = new ArrayList<>();
     Individu individuMystere1 = new Individu();
